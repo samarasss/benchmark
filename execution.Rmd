@@ -1,0 +1,17 @@
+```{r}
+library(here)
+```
+
+```{r}
+source(here::here("data_processing/aggregate_files.R"))
+source(here::here("data_processing/processing_data.R"))
+```
+
+
+```{r}
+aggregate_data_azure()
+```
+
+```{r}
+util_data <- processing_data_azure("data/vm_cpu_readingns_files/vmtable.csv", "data/aggregate.csv")
+```
